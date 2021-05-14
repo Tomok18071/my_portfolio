@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+// COLORS
+// @inlcude cl(black);
+//--------------------------------------------------
+
+$colors: (
+	white: #fff,
+	black: #000,
+	text: #333333,
+    grey: #666666,
+	lightgrey: #f4f4f4,
+    red: #FF0000,
+	primary: #EE6557,
+    gold: #B8860BEA,
+	baige: #FFFFDD,
+);
+
+
+
+@function cl($key) {
+	@return map-get($colors, $key);
+}
+
+
+// RESPONSIVE
+// @include overTab 
+//--------------------------------------------------
+// @mixin overTab {
+// 	@media print,screen and (min-width: 375px) {
+// 		@content;
+// 	}
+// }
+

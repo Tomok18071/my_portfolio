@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+
+/* ------------------------------------------------ */
+/* 基本の3本線 */
+/* ------------------------------------------------ */
+.nav_toggle {
+  @include pc {
+    display: block;
+    position: fixed;
+    width: 40px;
+    height: 30px;
+    right: 10px;
+    /* 3本線の位置調整 */
+    top: 50px;
+    z-index: 6;
+    /* 調整 */
+    cursor: pointer;
+    
+  };
+  @include tab {
+    
+  };
+  @include sp {
+    width: 30px;
+    right: 5px;
+    top: 35px;
+  };
+}
+
+.nav_toggle i {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  transition: transform .5s, opacity .5s;
+}
+
+.nav_toggle i:nth-child(1) {
+  top: 0;
+}
+
+.nav_toggle i:nth-child(2) {
+  top: 13px;
+  margin: auto;
+}
+
+.nav_toggle i:nth-child(3) {
+  bottom: 0;
+}
+
+/* ------------------------------------------------ */
+/* showクラス付ける */
+/* ------------------------------------------------ */
+.nav_toggle.show i:nth-child(1) {
+  transform: translateY(10px) rotate(-45deg);
+}
+
+.nav_toggle.show i:nth-child(2) {
+  opacity: 0;
+}
+
+.nav_toggle.show i:nth-child(3) {
+  transform: translateY(-16px) rotate(45deg);
+}
+
+
+/* ------------------------------------------------ */
+/* nav */
+/* ------------------------------------------------ */
+.nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+  background: rgba($color: cl(grey), $alpha: .9);
+  z-index: 5;
+  /* nav_toggleクリックしたら前面に出る様にする */
+
+  .nav_menu_ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .nav_menu_li {
+      @include pc {
+        &:not(:last-of-type) {
+          margin-bottom: 40px;
+          /* 調整 */
+        }
+    
+      };
+      @include tab {
+        
+      };
+      @include sp {
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+      };
+
+      .nav_menu_link {
+        font-size: 2rem;
+        color: cl(white);
+        font-weight: bold;
+        display: block;
+
+        &:hover {
+          color: cl(black);
+          text-shadow: 2px 2px 2px cl(white);
+          transform: translateY(-3px);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.nav.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+  // margin-bottom: 50px;
+  .cmn-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    &:not(:last-of-type) {
+      margin-right: 40px;
+    }
+  }
+
+  .contact-mail-link {
+    .fa-envelope {
+      color: white;
+      transition: all .6s ease;
+
+      &:hover {
+        transform: translateY(-8px);
+      }
+    }
+  }
+
+  .contact-twitter-link {
+    .fa-twitter-square {
+      color: white;
+      transition: all .6s ease;
+
+      &:hover {
+        transform: translateY(-8px);
+      }
+    }
+  }

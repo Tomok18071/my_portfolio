@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- reset.css -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+
+    <!--cdn/aos.css読み込み-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- luminous/ライトボックスのcssパス記述 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.3/luminous-basic.min.css"
+    />
+
+    <!-- slick.cssを2種類読み込む -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+    />
+
+    <!-- サイトタイトル記述 -->
+    <title>Tomoki SHIBATA's Portfolio</title>
+    <meta
+      name="description"
+      content="Web制作xマーケターであるTomoki SHIBATAのポートフォリオサイトです"
+    />
+    <!-- 自作CSS記述 -->
+    <link rel="stylesheet" href="/sass/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css"
+    />
+  </head>
+  <body id="top">
+    <!-- loading -->
+    <div id="loading">
+      <div class="loader">
+        <img src="/images/loading②.gif" />
+        <p class="loading-txt">Now Loading…</p>
+      </div>
+    </div>
+
+    <!-- header-navの直下に記述 -->
+    <span class="nav_toggle">
+      <i></i>
+      <i></i>
+      <i></i>
+    </span>
+    <nav class="nav">
+      <ul class="nav_menu_ul">
+        <li class="nav_menu_li">
+          <a class="nav_menu_link" href="#top">TOP</a>
+        </li>
+        <li class="nav_menu_li">
+          <a class="nav_menu_link" href="#about">ABOUT ME</a>
+        </li>
+        <li class="nav_menu_li">
+          <a class="nav_menu_link" href="#skills">SKILLS</a>
+        </li>
+        <li class="nav_menu_li">
+          <a class="nav_menu_link" href="#services">SERVICES</a>
+        </li>
+        <li class="nav_menu_li">
+          <a class="nav_menu_link" href="#flow">FLOW</a>
+        </li>
+        <li class="nav_menu_li">
+          <a class="nav_menu_link" href="#works">WORKS</a>
+        </li>
+        <li class="nav_menu_li">
+          <a class="nav_menu_link" href="#contact">CONTACT</a>
+        </li>
+        <li class="nav_menu_li">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSctfsEswAETfyeSbrIr23ZbakAyXdvjFSAqrA_hSWg788u6jQ/viewform?embedded=true"
+            class="contact-mail-link cmn-link"
+            target="_blank"
+          >
+            <i class="fas fa-envelope fa-3x"></i>
+          </a>
+          <a
+            href="https://twitter.com/Tomok1_SBT"
+            class="contact-twitter-link cmn-link"
+            target="_blank"
+          >
+            <i class="fab fa-twitter-square fa-3x twitter-icon"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main">
+      <!-- video -->
+      <section class="video-contents">
+        <div class="video-ttl-wrap inner video-inner">
+          <h1
+            class="video-ttl"
+            id="js-video-ttl"
+            data-aos="fade-down"
+            data-aos-delay="3000"
+          >
+            <p class="typ">
+              Tomoki SHIBATA's Portfolio
+              <br />
+              〜Web Engineer〜
+            </p>
+          </h1>
+        </div>
+        <video
+          src="/images/Seo - 11473.mp4"
+          class="video"
+          autoplay
+          loop
+          muted
+        ></video>
+      </section>
+
+      <!-- -------------------------------------------- -->
+      <!-- about -->
+      <!-- -------------------------------------------- -->
+      <section class="about" id="about">
+        <div class="about-inner inner w1280">
+          <div class="cmn-ttl-wrap about-ttl-wrap">
+            <h2 class="cmn-ttl about-ttl">ABOUT ME</h2>
+          </div>
+          <div class="about-img-wrap">
+            <img
+              src="/images/my-img1.jpeg"
+              alt="Tomokiの画像"
+              class="about-img"
+              data-aos="zoom-out"
+            />
+          </div>
+          <div class="introduction-wrap about-wrap" data-aos="fade-up">
+            <h3 class="introduction-ttl about-cmn-ttl">INTRODUCTION</h3>
+            <div class="introduction-desc about-desc">
+              初めまして。フリーランスWebエンジニアの柴田 智樹と申します。<br />
+              現在フロントエンドを中心に、Webサイト制作を行なっております。<br />
+              <br />
+              <ul class="about-list">
+                <li class="about-item">クライアント様との信頼関係を構築</li>
+                <li class="about-item">
+                  クライアント様が求める以上の成果物を納品
+                </li>
+                <li class="about-item">提示納期よりも早い納品</li>
+              </ul>
+              上記3点を重視しております。<br />
+              <br />
+              クライアント様の質問・課題にお応えするべく<span>丁寧なコミュニケーション</span>と、信頼関係を築けるように<br />
+              最後まで責任を持ち、仕事に取り組ませていただきます。
+            </div>
+          </div>
+          <div class="education-wrap about-wrap" data-aos="fade-up">
+            <h3 class="education-ttl about-cmn-ttl">Educations</h3>
+            <div class="education-desc about-desc">
+              <dl class="table">
+                <div class="table-item">
+                  <dt class="year">1985年 :</dt>
+                  <dd class="history">東京都江東区出身</dd>
+                </div>
+                <div class="table-item">
+                  <dt class="year">2004年 :</dt>
+                  <dd class="history">都立調布北高等学校を卒業</dd>
+                </div>
+                <div class="table-item">
+                  <dt class="year">2011年 :</dt>
+                  <dd class="history">日本大学法学部政治経済学部卒業</dd>
+                </div>
+              </dl>
+              <div class="techacademy-wrap">
+                <p class="techacademy-txt">
+                  プログラミングスクールTechAcademyの「フロントエンドコース」1ヶ月で修了
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------- -->
+      <!-- skills -->
+      <!-- -------------------------------------------- -->
+      <section id="skills" class="skills">
+        <div class="skills-inner inner w1280">
+          <div class="cmn-ttl-wrap skills-ttl-wrap">
+            <h2 class="cmn-ttl skills-ttl">SKILLS</h2>
+          </div>
+          <div class="skills-container">
+            <div
+              class="skills-img-wrap"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <img src="/images/HTML.jpg" alt="" class="skills-img" />
+              <img src="/images/CSS.jpg" alt="" class="skills-img" />
+              <img src="/images/Javascript.jpg" alt="" class="skills-img" />
+              <img src="/images/sass.png" alt="" class="skills-img" />
+            </div>
+            <div
+              class="container"
+              data-aos="fade-right"
+              data-aos-delay="600"
+              data-aos-anchor-placement="top-bottom"
+            >
+              <div class="skills-wrap">
+                <span class="Name">Html</span>
+                <div class="percent">
+                  <div class="progress" style="width: 95%"></div>
+                </div>
+                <span class="Value">95%</span>
+              </div>
+              <div class="skills-wrap">
+                <span class="Name">CSS</span>
+                <div class="percent">
+                  <div class="progress" style="width: 95%"></div>
+                </div>
+                <span class="Value">95%</span>
+              </div>
+              <div class="skills-wrap">
+                <span class="Name">Sass</span>
+                <div class="percent">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+                <span class="Value">90%</span>
+              </div>
+              <div class="skills-wrap">
+                <span class="Name">JavaScript</span>
+                <div class="percent">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+                <span class="Value">85%</span>
+              </div>
+            </div>
+
+            <!-- <div
+              class="skillbar-wrap"
+              data-aos="fade-left"
+              data-aos-delay="600"
+            >
+              <div class="skillbar skillbar-html" data-percent="95">
+                <div class="skillbar-title">HTML5</div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+              </div>
+              <div class="skillbar skillbar-css" data-percent="90">
+                <div class="skillbar-title">CSS</div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+              </div>
+              <div class="skillbar skillbar-scss" data-percent="90">
+                <div class="skillbar-title">SCSS</div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+              </div>
+              <div class="skillbar skillbar-js" data-percent="80">
+                <div class="skillbar-title">JavaScript</div>
+                <div class="skillbar-bar"></div>
+                <div class="skill-bar-percent"></div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- services -->
+      <section id="services" class="services">
+        <div class="services-inner inner w1280">
+          <div class="cmn-ttl-wrap services-ttl-wrap">
+            <h2 class="cmn-ttl services-ttl">SERVICES</h2>
+          </div>
+          <div class="services-container">
+            <div class="services-list col-3">
+              <div
+                class="services-item"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <div class="services-img-wrap">
+                  <img
+                    src="/images/services-img①.jpg"
+                    alt="サービス内容のディレクション画像"
+                    class="services-img"
+                  />
+                </div>
+                <h3 class="services-container-ttl">DIRECTION</h3>
+                <div class="services-container-desc">
+                  作成するWebページについて、お客様からの要望をヒアリングし、適切な提案を致します。
+                  現状の問題点や、Webページのご希望など、まずはお気軽にお申し付けください。
+                  集客効果の高いWebページになるように必要な情報を選択し、適切にご対応させて頂きます。
+                </div>
+              </div>
+              <div
+                class="services-item"
+                data-aos="fade-up"
+                data-aos-delay="800"
+              >
+                <div class="services-img-wrap">
+                  <img
+                    src="/images/services-img②.jpg"
+                    alt=""
+                    class="services-img"
+                  />
+                </div>
+                <h3 class="services-container-ttl">CODING</h3>
+                <div class="services-container-desc">
+                  LPやコーポレートサイトなどのデザインデータをお預かりし、デザインの意図を理解した上で適切にコーディング致します。(<span>レスポンシブ対応可</span>)<br />
+                  【料金目安】<br />
+                  コード修正: ¥10,000~/1p <br />
+                  LP制作: ¥20,000~/1p
+                </div>
+              </div>
+              <div
+                class="services-item"
+                data-aos="fade-up"
+                data-aos-delay="1200"
+              >
+                <div class="services-img-wrap">
+                  <img
+                    src="/images/services-img③.jpg"
+                    alt=""
+                    class="services-img"
+                  />
+                </div>
+                <h3 class="services-container-ttl">MAINTENANCE</h3>
+                <div class="services-container-desc">
+                  更新やメンテナンスは集客効果の高いWebページにするためには非常に大切です。<br />
+                  「サイトが古くなってきたので、更新したい」「写真やアイコンを入れ替えたい」などのご相談にも対応いたしますので、まずはお気軽にご相談ください。
+                </div>
+              </div>
+            </div>
+            <p class="services-notice" data-aos="fade">
+              ※価格はあくまでも目安です。正式なお見積もりは、別途ご相談させていただきます。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Flow -->
+      <section id="flow" class="flow">
+        <div class="flow-inner inner w1280">
+          <div class="cmn-ttl-wrap flow-ttl-wrap">
+            <h2 class="cmn-ttl flow-ttl">FLOW</h2>
+          </div>
+          <div class="flow-container">
+            <div class="flow-list">
+              <div class="flow-item" data-aos="fade-right" data-aos-delay="300">
+                <h3 class="flow-item-ttl">
+                  STEP1
+                  <br />
+                  <span>お問い合わせ</span>
+                </h3>
+                <p class="flow-item-txt">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSctfsEswAETfyeSbrIr23ZbakAyXdvjFSAqrA_hSWg788u6jQ/viewform?embedded=true"
+                    class="flow-item-link"
+                    >お問い合わせフォーム</a
+                  >よりご連絡ください。
+                </p>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+              <i class="fas fa-chevron-down"></i>
+              <div class="flow-item" data-aos="fade-right" data-aos-delay="600">
+                <h3 class="flow-item-ttl">
+                  STEP2
+                  <br />
+                  <span>ヒアリング</span>
+                </h3>
+                <p class="flow-item-txt">
+                  お客様のご要望をヒアリングし、レイアウトを決めます。その後お見積もりをお出しします。
+                </p>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+              <i class="fas fa-chevron-down"></i>
+              <div class="flow-item" data-aos="fade-right" data-aos-delay="900">
+                <h3 class="flow-item-ttl">
+                  STEP3
+                  <br />
+                  <span>制作</span>
+                </h3>
+                <p class="flow-item-txt">
+                  ご契約後、ご納得頂くまで打ち合わせをし、お客様のご要望に合わせた制作をスピード感を持って進めさせて頂きます。
+                </p>
+              </div>
+              <i class="fas fa-chevron-right"></i>
+              <div class="down-box">
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div
+                class="flow-item"
+                data-aos="fade-right"
+                data-aos-delay="1200"
+              >
+                <h3 class="flow-item-ttl">
+                  STEP4
+                  <br />
+                  <span>納品・アフターケア</span>
+                </h3>
+                <p class="flow-item-txt">
+                  完成したホームページをご確認下さい。修正がなければ納品となります。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- works -->
+      <section id="works" class="works">
+        <div class="works-inner inner w1280">
+          <div class="cmn-ttl-wrap works-ttl-wrap">
+            <h2 class="cmn-ttl works-ttl">WORKS</h2>
+          </div>
+          <div class="works-container">
+            <p class="works-txt">
+              オリジナルポートフォリオです。クリックするとリンク先にジャンプします
+            </p>
+            <div class="works-list col-3">
+              <div class="works-item" data-aos="zoom-out-up">
+                <a
+                  href="/images/codedays_demo.png"
+                  class="works-item-link"
+                  target="”_blank”"
+                >
+                  <figure class="hover-parent">
+                    <img
+                      src="/images/codedays-sshot.png"
+                      class="works-item-img"
+                    />
+                    <figcaption class="hover-mask">
+                      【Category】デザインカンプ模写<br />
+                      【Title】Tomoki SHIBATA's Portfolio <br />
+                      【Skill】HTML/CSS/Sass/jQuery <br />
+                      【Summary】初めて独学で模写したサイトです
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="works-item" data-aos="zoom-out-up">
+                <a
+                  href="/images/snowmokey_demo.png"
+                  class="works-item-link"
+                  target="”_blank”"
+                >
+                  <figure class="hover-parent">
+                    <img
+                      src="/images/snowmonkey_sshot.png"
+                      class="works-item-img"
+                    />
+                    <figcaption class="hover-mask">
+                      【Category】デザインカンプ模写<br />
+                      【Title】Corporate Site<br />
+                      【Skill】HTML/CSS/jQuery/WordPress <br />
+                      【Summary】SnowMonkeyを使って作成したコーポレートサイトの模写です
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="works-item" data-aos="zoom-out-up">
+                <a
+                  href="https://tomok18071.github.io/"
+                  class="works-item-link"
+                  target="”_blank”"
+                >
+                  <figure class="hover-parent">
+                    <img
+                      src="/images/portfolio-zone-mid.png"
+                      class="works-item-img"
+                    />
+                    <figcaption class="hover-mask">
+                      【Category】デザインカンプ模写<br />
+                      【Title】極楽亭 <br />
+                      【Skill】HTML/CSS/Sass/jQuery <br />
+                      【Summary】架空の温泉旅館サイトのデザインカンプ模写です
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section id="contact" class="contact">
+        <div class="contact-inner inner w1280">
+          <div class="cmn-ttl-wrap contact-ttl-wrap">
+            <h2 class="cmn-ttl contact-ttl">CONTACT</h2>
+          </div>
+          <div class="contact-container">
+            <p class="contact-txt">
+              ご依頼（ご相談）はお気軽にメールでお待ちしております。
+            </p>
+            <div class="contact-sns-wrap">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSctfsEswAETfyeSbrIr23ZbakAyXdvjFSAqrA_hSWg788u6jQ/viewform?embedded=true"
+                class="contact-mail-link cmn-link"
+                target="_blank"
+                data-aos="fade-right"
+              >
+                <i class="fas fa-envelope fa-3x"></i>
+              </a>
+              <a
+                href="https://twitter.com/Tomok1_SBT"
+                class="contact-twitter-link cmn-link"
+                target="_blank"
+                data-aos="fade-left"
+              >
+                <i class="fab fa-twitter-square fa-3x twitter-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------------------------------------- -->
+      <!-- footer -->
+      <!-- -------------------------------------------- -->
+      <footer class="footer">
+        <div class="copyright">
+          Copyright © 2021 Tomoki SHIBATA's Portfolio All Rights Reserved.
+        </div>
+      </footer>
+
+      <!-- -------------------------------------------- -->
+      <!-- b-to-top -->
+      <!-- -------------------------------------------- -->
+      <div id="page-top"><i class="fas fa-angle-double-up"></i></div>
+    </main>
+
+    <!-- jQuery/JavaScript読みこみ -->
+    <!-- lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.2/luminous.min.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- 自作js -->
+    <script src="js/script.js"></script>
+
+    <!-- jQueryプラグイン -->
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/js/skill.bars.jquery.js"></script>
+    <script src="/js/jquery.inview.js"></script>
+    <!-- <script src="/js/fakeLoader.min.js"></script> -->
+  </body>
+</html>

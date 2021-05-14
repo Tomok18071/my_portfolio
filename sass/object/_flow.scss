@@ -1,0 +1,212 @@
+@charset "utf-8";
+$pc: 1440px; // PC
+$tab: 680px; // タブレット
+$sp: 375px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+
+.flow {
+  @include pc {
+    background-image: url(/images/flow⑤.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 80px;
+
+  }
+
+  ;
+
+  @include tab {}
+
+  ;
+
+  @include sp {
+    padding: 40px 0;
+  }
+
+  ;
+
+  .flow-inner {
+    .flow-ttl {
+      @include pc {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          font-family: "Font Awesome 5 Free";
+          content: "\f0b2";
+          top: 50%;
+          left: 39%;
+          transform: translateY(-50%);
+          font-weight: 900;
+        }
+
+      }
+
+      ;
+
+      @include tab {}
+
+      ;
+
+      @include sp {
+        &::before {
+          left: 50%;
+          transform: translate(-50%, -144%);
+          font-size: 30px;
+        }
+      }
+
+      ;
+    }
+
+    .flow-container {
+      .flow-list {
+        @include pc {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+        }
+
+        ;
+
+        @include tab {}
+
+        ;
+
+        @include sp {
+          flex-direction: column;
+        }
+
+        ;
+
+        .flow-item {
+          @include pc {
+            color: blanchedalmond;
+            width: calc(100% / 4);
+            padding: 1rem;
+            // background: rgba(255, 255, 255, .3);
+            border-radius: 8px;
+            text-align: center;
+
+          }
+
+          ;
+
+          @include tab {}
+
+          ;
+
+          @include sp {
+            text-align: left;
+            width: 100%;
+            // padding: 8px;
+            margin-bottom: 30px;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+
+          ;
+
+          .flow-item-ttl {
+            @include pc {
+              margin-bottom: 25px;
+              font-size: 2rem;
+              font-weight: bold;
+
+            }
+
+            ;
+
+            @include tab {}
+
+            ;
+
+            @include sp {
+              text-align: center;
+              line-height: 1.0;
+            }
+
+            ;
+
+            span {
+              font-weight: bold;
+              font-size: 20px;
+            }
+          }
+
+          .flow-item-txt {
+            .flow-item-link {
+              text-decoration: underline;
+              transition: .6s all ease;
+              color: blanchedalmond;
+              font-weight: bold;
+
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+
+        .fa-chevron-right {
+          @include pc {
+            padding-top: 70px;
+          }
+
+          ;
+
+          @include tab {}
+
+          ;
+
+          @include sp {
+            display: none;
+          }
+
+          ;
+        }
+
+        .fa-chevron-down {
+          @include pc {
+            display: none;
+
+          }
+
+          ;
+
+          @include tab {}
+
+          ;
+
+          @include sp {
+            display: block;
+            padding-left: 175px;
+            padding-bottom: 40px;
+          }
+
+          ;
+        }
+      }
+    }
+  }
+}

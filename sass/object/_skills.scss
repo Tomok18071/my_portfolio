@@ -1,0 +1,270 @@
+@charset "utf-8";
+$pc: 1440px; // PC
+$tab: 680px; // タブレット
+$sp: 375px; // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+
+.skills {
+  @include pc {
+    background: cl(black);
+    padding-bottom: 80px;
+
+  }
+
+  ;
+
+  @include tab {}
+
+  ;
+
+  @include sp {
+    padding: 40px 0;
+  }
+
+  ;
+
+  .cmn-ttl-wrap {
+
+    .skills-ttl {
+      @include pc {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          font-family: "Font Awesome 5 Free";
+          content: "\f085";
+          top: 50%;
+          left: 37%;
+          transform: translateY(-50%);
+          font-weight: 900;
+        }
+
+      }
+
+      ;
+
+      @include tab {}
+
+      ;
+
+      @include sp {
+        &::before {
+          left: 50%;
+          transform: translate(-50%, -145%);
+          font-size: 30px;
+        }
+      }
+
+      ;
+    }
+  }
+
+
+
+
+  .skills-container {
+    @include pc {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    
+    };
+    @include tab {
+      
+    };
+    @include sp {
+      flex-direction: column
+    };
+
+
+    .skills-img-wrap {
+      @include pc {
+        padding: 20px 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 45%;
+    
+      };
+      @include tab {
+        
+      };
+      @include sp {
+        width: 100%;
+        margin-bottom: 30px;
+      };
+
+
+      .skills-img {
+        @include pc {
+          display: block;
+          width: 200px;
+          height: 200px;
+          border-radius: 8px;
+          transition: .6s all ease;
+          cursor: pointer;
+  
+          &:hover {
+            transform: translateY(-10px);
+            box-shadow: 3px 3px 3px cl(grey);
+          }
+    
+        };
+        @include tab {
+          
+        };
+        @include sp {
+          width: 170px;
+          height: 170px;
+        };
+
+
+
+        // width: 100%;
+        &:nth-of-type(1) {
+          margin-right: 1rem;
+          margin-bottom: 1rem;
+
+        }
+
+        &:nth-of-type(2) {
+          margin-bottom: 1rem;
+        }
+
+        &:nth-of-type(3) {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------ */
+/* skillbar */
+/* ------------------------------------------------ */
+.container {
+  @include pc {
+    position: relative;
+    width: 50%;
+    
+  };
+  @include tab {
+    
+  };
+  @include sp {
+    width: 100%;
+    padding: 0 10px;
+  };
+}
+
+.skills-wrap {
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  background: linear-gradient(#616161 0%, #333 10%, #222);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #000;
+  transition: .6s all ease;
+  padding: 20px 0;
+}
+
+.skills-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+.Name {
+  position: relative;
+  width: 100px;
+  text-align: right;
+  margin-top: -2px;
+  // text-transform: uppercase;
+}
+
+.percent {
+  position: relative;
+  width: calc(100% - 150px);
+  height: 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background: #151515;
+  box-shadow: inset 0 0 10px #000;
+  overflow: hidden;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 2px #000;
+  animation: animate 4s ease-in-out forwards;
+}
+
+@keyframes animate {
+  from {
+    width: 0;
+  }
+}
+
+.Value {
+  position: relative;
+  width: 40px;
+  text-align: left;
+  margin-top: -2px;
+}
+
+.container .skills-wrap:nth-child(1) .percent .progress {
+  background: linear-gradient(45deg, #1fe6ff, #673AB7);
+}
+
+.container .skills-wrap:nth-child(2) .percent .progress {
+  background: linear-gradient(45deg, #3bc0ff, #33ff00);
+}
+
+.container .skills-wrap:nth-child(3) .percent .progress {
+  background: linear-gradient(45deg, #ffee54, #ff00ca);
+}
+
+.container .skills-wrap:nth-child(4) .percent .progress {
+  background: linear-gradient(45deg, #22ffde, #2196F3);
+}
+
+.container:hover .skills-wrap {
+  opacity: .2;
+}
+
+.container .skills-wrap:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}

@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+
+.services {
+  @include pc {
+    background-image: url(/images/services.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 80px;
+    
+  };
+  @include tab {
+    
+  };
+  @include sp {
+    background-image: url(/images/services-sp.jpg);
+    padding: 40px 0;
+  };
+
+  .services-inner {
+
+    .services-ttl {
+      @include pc {
+        position: relative;
+        &::before {
+          position: absolute;
+          font-family: "Font Awesome 5 Free";
+          content: "\f2b5";
+          top: 50%;
+          left: 35%;
+          transform: translateY(-50%);
+          font-weight: 900;
+        }    
+      };
+      @include tab {
+        
+      };
+      @include sp {
+        &::before {
+          left: 50%;
+          transform: translate(-50%, -146%);
+          font-size: 30px;
+        }
+      };
+    }      
+  }
+
+  .services-list {
+    @include pc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    
+    };
+    @include tab {
+      
+    };
+    @include sp {
+      flex-direction: column;
+      margin-bottom: 0;
+    };
+
+    .services-item {
+      @include pc {
+        width: calc(100% / 3);
+        text-align: center;
+        &:not(:last-of-type) {
+          margin-right: 20px;
+        }
+    
+      };
+      @include tab {
+        
+      };
+      @include sp {
+        width: 100%;
+        margin-bottom: 50px;
+        &:not(:last-of-type) {
+          margin-right: 0;
+        }
+      };
+
+
+
+      .services-img-wrap {
+
+        .services-img {
+          @include pc {
+            display: inline-block;
+            // margin: 0 auto;
+            width: 215px;
+            height: 215px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: all .6s ease;
+  
+            &:hover {
+              transform: scale(1.1);
+            }
+    
+          };
+          @include tab {
+            
+          };
+          @include sp {
+            width: 170px;
+            height: 170px;
+          };
+        }
+      }
+
+      .services-container-ttl {
+        @include pc {
+          font-size: 25px;
+          margin-bottom: 20px;
+    
+        };
+        @include tab {
+          
+        };
+        @include sp {
+          font-size: 30px;
+        };
+      }
+    }
+  }
+
+  .services-container-desc {
+    padding: 10px 5px;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 8px;
+    line-height: 2;
+
+    span {
+      color: yellow;
+    }
+  }
+}
+
+
+.services-notice {
+  @include pc {
+    text-align: center;
+    
+  };
+  @include tab {
+    
+  };
+  @include sp {
+    font-size: 14px;
+  };
+}
+
+
+// @media screen and (max-width: 375px) {
+//   .service {
+
+//   }
+// }

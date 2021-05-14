@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+
+.contact {
+  @include pc {
+    background-image: url(/images/contact②.jpg);
+    background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 80px;
+        text-align: center;
+    
+  };
+  @include tab {
+    
+  };
+  @include sp {
+    padding: 40px 0;
+  };
+
+  .contact-inner {
+    .cmn-ttl {
+      @include pc {
+        position: relative;
+  
+        &::before {
+          position: absolute;
+          font-family: "Font Awesome 5 Free";
+          content: "\f0e0";
+          top: 50%;
+          left: 37%;
+          transform: translateY(-50%);
+          font-weight: 900;
+        }
+    
+      };
+      @include tab {
+        
+      };
+      @include sp {
+        &::before {
+          left: 50%;
+          transform: translate(-50%, -143%);
+          font-size: 30px;
+        }
+      };
+    }
+
+    .contact-container {
+      .contact-txt {
+        @include pc {
+          font-size: 1.5rem;
+          margin-bottom: 50px;
+    
+        };
+        @include tab {
+          
+        };
+        @include sp {
+          font-size: 20px;
+          margin-bottom: 40px;
+        };
+
+      }
+      .contact-sns-wrap {
+        // margin-bottom: 50px;
+        .cmn-link {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          &:not(:last-of-type) {
+            margin-right: 40px;
+          }
+        }
+          .contact-mail-link {
+            @include pc {
+              .fa-envelope {
+                color: white;
+                transition: all .6s ease;
+                &:hover {
+                  transform: translateY(-8px);
+                }
+    
+            };
+            @include tab {
+              
+            };
+            @include sp {
+              display: block;
+              width: 100%;
+              font-size: 1rem;
+              margin-bottom: 20px;
+            };
+            }
+          }
+          .contact-twitter-link {
+            .fa-twitter-square {
+              color: white;
+              transition: all .6s ease;
+              &:hover {
+                transform: translateY(-8px);
+              }
+            }
+          }
+      }
+    }
+  }
+}
